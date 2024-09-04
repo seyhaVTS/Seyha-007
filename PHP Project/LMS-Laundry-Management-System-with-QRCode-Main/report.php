@@ -79,8 +79,7 @@
                                                 echo "<th colspan='4'>Report Date: $fr_date_table2 - To Date: $to_date_table2</th>";
                                             }
                                             ?>
-                                        </tr>
-                                        <!--  -->
+                                        </tr>  
                                         <tr>
                                             <th>Nº</th>
                                             <th>Customer</th>
