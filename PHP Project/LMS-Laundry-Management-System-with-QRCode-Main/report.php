@@ -65,26 +65,21 @@
                                 <input type="date" id='to_date' name="to_date">
                                 <button type="submit" name="submit" class="btn btn-primary">submit</button>
                             </form>
-                        </div>     
+                        </div>  
                         <div class="card-body">
                             <div class="table-responsive table mt-2" id="mytable" role="grid" aria-describedby="dataTable_info">
                                 <table class="table table-striped my-0" id="dataTable"> 
-                                    <thead> <tr>
-                                            <td>
-                                                <?php
-                                                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                                                        $fr_date = $_POST['fr_date'];
-                                                        $to_date = $_POST['to_date'];
+                                    <thead> 
+                                        <tr>
+                                            <?php
+                                            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                                                $fr_date_table2 = $_POST['fr_date'] ?? '';
+                                                $to_date_table2 = $_POST['to_date'] ?? '';
 
-                                                        echo "<table class='card-body'>";
-                                                        echo "<tr><td>Report Date : $fr_date </td></tr>";
-                                                        echo "<tr><td>To Date : $to_date </td></tr>";
-                                                        echo "</table>";
-                                                    }
-                                                    ?> 
-                                            </td>
-                                        </tr>
-                                        
+                                                echo "<th colspan='4'>Report Date: $fr_date_table2 - To Date: $to_date_table2</th>";
+                                            }
+                                            ?>
+                                        </tr>  
                                         <tr>
                                             <th>Nº</th>
                                             <th>Customer</th>
